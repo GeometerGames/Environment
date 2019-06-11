@@ -1,0 +1,33 @@
+[user]
+    name = Devon Parsons
+    email = devon.parsons@maplewave.com
+[core]
+    whitespace = trailing-space,space-before-tab
+    autocrlf = false
+	# editor = subl
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    page = true
+[alias]
+    b = checkout -b
+    can = commit --amend --no-edit
+    cm = commit -m
+    co = checkout
+    cp = cherry-pick
+    files = show --pretty="" --name-only HEAD
+    onto = "!git rebase --onto \"$1\" HEAD~1 #"
+    onton = "!git rebase --onto \"$1\" HEAD~$2 #"
+    purr = pull --rebase
+    pushf = "!git push -f origin $(git rev-parse --abbrev-ref HEAD)"
+    pushu = "!git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+    rhu = reset --hard @{u}
+    st = status -sb
+    untrack-a = rm --cached
+    untrack-m = reset HEAD~1 --
+    wtf = config --list --show-origin
+[apply]
+    whitespace = fix
